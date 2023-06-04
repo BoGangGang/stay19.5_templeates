@@ -1,15 +1,106 @@
 /* 공통 스타일 */
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+@font-face {
+    font-family: 'aGoEunGeulCciM';
+    src: url("./fonts/aGoEunGeulCciM.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'NanumGothic';
+    src: url("./fonts/NanumGothic.woff") format('woff');
+}
+
+body {
+    background-color: #FFFFFF;
+    font-family: 'NanumGothic', sans-serif;
+    min-height: 100vh;
+}
+
+.location {
+    background-color: #D9D9D9;
+    color: black;
+    padding: 10px;
+    width:100%;
+    text-align: center;
+    font-size: 14px;
+
+}
+
+.map_container {
+    text-align: center;
+    height:100%;
+    position:relative;
+}
+
+.map_wrap {
+    height:80vh;
+}
+
+
+.navbar_front {
+    background-image: linear-gradient(to top, #E1BEBB, #DF938D);
+    height: 60px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo {
+    height: 57px;
+    display: block;
+    margin: 0 auto;
+}
+
+.dotted-line-left {
+    border-top: 4px dotted white;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.dotted-line-right {
+    border-top: 4px dotted white;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 60px;
+    font-family: 'NanumGothic', sans-serif;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     font-size: 12px;
-  }
+    color: black;
+}
+
+.nav-link.nav-color {
+    color: #DF938D;
+}
+
+.nav-link img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+}
 
   /* 지도 */
   #map {
     width:100%;
-    height:75vh;
+    height: calc(100vh - 170px);
     position:relative;
     overflow:hidden;
     object-fit:cover;
@@ -37,6 +128,7 @@
     padding: 6px 0;
     text-align: center;
     cursor: pointer;
+    font-size : 10px;
   }
   
   #keyword li.on {
@@ -62,6 +154,9 @@
   }
   
   #keyword li .keyword_bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_category.png) no-repeat;
   }
   
@@ -152,7 +247,6 @@
     font-size: 14px;
     border-radius: 6px;
     margin: -1px;
-    padding: 10px;
     color: #fff;
     background: #d95050 url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png') no-repeat right 14px center;
   }

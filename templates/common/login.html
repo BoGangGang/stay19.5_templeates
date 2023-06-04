@@ -5,12 +5,13 @@
 <head>
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{% static 'jquery-3.7.0.min.js' %}?after"></script>                                 <!-- 자바스크립트 추가!!! -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'style.css' %}?after">
 
     <style>
         body {
-                background-image: linear-gradient(to top left, #D2D0D0, #D2A4A8);
+                background-image: linear-gradient(to top left, #D2D0D0, #E09198);
                 background-size: cover;
                 padding: 20px;
                 font-family: 'aGoEunGeulCciM';
@@ -23,13 +24,13 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="ccontainer">
         <div class="row">
-            <div class="col-12">
-                <img src="{%static 'images/login/login_images.png' %}" alt = "로고" class = "logo">
+            <div class="col-12 d-flex justify-content-center">
+                <img src="{% static 'images/login/login_images.png' %}" alt="로고" class="logo">
             </div>
             <div class="col-12">
-                <div class="subtitle">네 컷 사진 집합 서비스</div>
+                <div class="subtitle">인생 네 컷 종합 서비스</div>
                 <div class="title">STAY 19.5</div>
                 <a href="#" class="login-button" onclick="kakaoLogin()">                                                                       <!--카카오로 로그인 링크 수정 해야 함-->
                     <span class = "login-button-text">카카오로 로그인</span>
@@ -52,11 +53,8 @@
                     console.log(response);
                     const { id, properties: { nickname, thumbnail_image} } = response;
                     console.log(id);
-                    alert(id);
                     console.log(nickname);
-                    alert(nickname);
                     console.log(thumbnail_image);
-                    alert(thumbnail_image);
                     window.location.href = "/main";
                 },
                 fail: function (error) {

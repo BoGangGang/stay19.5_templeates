@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <title>Stay 19.5 | Map</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{% static 'jquery-3.7.0.min.js' %}?after"></script>                                 <!-- 자바스크립트 추가!!! -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'style.css' %}?after">
     <link rel="stylesheet" href="{% static 'css/map.css' %}?after">
 
 </head>
@@ -18,7 +18,7 @@
         </nav>
     </header>
 
-    <div class="location">경기 용인시 수지구 죽전동 1591</div>
+    <div class="location">위치 정보를 동의해주세요.</div>
     <div class="map_container">
         <div class="map_wrap">
             <div id="map"></div>
@@ -41,7 +41,7 @@
                     </li>
                     <li id="비룸스튜디오" data-order="4">
                         <span class="keyword_bg cafe"></span>
-                        비룸스튜디오
+                        비룸<br>스튜디오
                     </li>
                     <li id="즉석사진" data-order="5">
                         <span class="keyword_bg store"></span>
@@ -49,7 +49,7 @@
                     </li>
                 </ul>
         </div>
-    </div>>
+    </div>
 
     <footer>
         <nav class="navbar">
