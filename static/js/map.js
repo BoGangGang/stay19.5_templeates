@@ -191,7 +191,7 @@ kakao.maps.event.addListener(map, 'zoom_changed', function() {
 
 // 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
 function addMarker(position, order) {
-    var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_category.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
+    var imageSrc = 'https://boganggang.github.io/stay19.5_map_category/map_category.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다 https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_category.png
         imageSize = new kakao.maps.Size(27, 28),  // 마커 이미지의 크기
         imgOptions =  {
             spriteSize : new kakao.maps.Size(72, 208), // 스프라이트 이미지의 크기
