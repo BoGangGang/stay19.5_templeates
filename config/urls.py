@@ -28,6 +28,8 @@ urlpatterns = [
     path('main/', common.views.main, name='main'),
     path('login/', common.views.login, name='login'),
     path('info/', common.views.info, name='info'),
+    path('oauth/redirect/', common.views.getcode, name='oauth'),
+
 
     path('map/', map.views.map, name='map'),
 

@@ -19,14 +19,11 @@
 
     <div class="ccontainer">
         <div class="profile-container">
-            <img src="{% static 'images/basic_profile.png' %}" alt="프로필 사진" class="profile-image">                   <!--프로필 사진 카카오톡 프사로 바꾸기-->
+            <img src="{{ thumbnail_image }}" alt="프로필 사진" class="profile-image">                   <!--프로필 사진 카카오톡 프사로 바꾸기-->
             <div class="name-box">
-                <h4>홍길동</h4>                                                                                          <!--유저 네임 바꾸기-->
+                <h4>{{ nickname }}</h4>                                                               <!--유저 네임 바꾸기-->
             </div>
-            <div class="email-box">
-                <p>example@example.com</p>                                                                              <!--카카오톡 계정 이메일 주소로 바꾸기-->
-            </div>
-            <a class="logout-button" href="/login">로그아웃</a>                                                           <!--로그아웃 링크-->
+            <a class="logout-button" href="/login">로그아웃</a>                                         <!--로그아웃 링크-->
         </div>
     </div>
 
